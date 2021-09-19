@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "https://jopt05.github.io/frontendmentor-githubprofiles/static/css/main.c76dd7e6.chunk.css",
+    "main.js": "https://jopt05.github.io/frontendmentor-githubprofiles/static/js/main.a453b79a.chunk.js",
+    "main.js.map": "https://jopt05.github.io/frontendmentor-githubprofiles/static/js/main.a453b79a.chunk.js.map",
+    "runtime-main.js": "https://jopt05.github.io/frontendmentor-githubprofiles/static/js/runtime-main.60ead003.js",
+    "runtime-main.js.map": "https://jopt05.github.io/frontendmentor-githubprofiles/static/js/runtime-main.60ead003.js.map",
+    "static/js/2.e35bcb1d.chunk.js": "https://jopt05.github.io/frontendmentor-githubprofiles/static/js/2.e35bcb1d.chunk.js",
+    "static/js/2.e35bcb1d.chunk.js.map": "https://jopt05.github.io/frontendmentor-githubprofiles/static/js/2.e35bcb1d.chunk.js.map",
+    "index.html": "https://jopt05.github.io/frontendmentor-githubprofiles/index.html",
+    "static/css/main.c76dd7e6.chunk.css.map": "https://jopt05.github.io/frontendmentor-githubprofiles/static/css/main.c76dd7e6.chunk.css.map",
+    "static/js/2.e35bcb1d.chunk.js.LICENSE.txt": "https://jopt05.github.io/frontendmentor-githubprofiles/static/js/2.e35bcb1d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60ead003.js",
+    "static/js/2.e35bcb1d.chunk.js",
+    "static/css/main.c76dd7e6.chunk.css",
+    "static/js/main.a453b79a.chunk.js"
+  ]
+}
