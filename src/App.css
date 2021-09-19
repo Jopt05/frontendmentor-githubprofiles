@@ -278,17 +278,142 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (min-width: 400px) {
+  /* .App {
+    padding: 20px 5%;
+    height: auto;
+    margin: 0;
+    background-color: var(--body-background);
+    transition: all .2s ease-in-out;
+  } */
+
   .App {
     background-color: var(--body-background);
     width: 100vw;
-    height: calc(100vh + 100px);
+    height: -webkit-fill-available;
+    padding: 20px 0px;
+    margin: 0;
+  }
+
+  /* .Container {
+    position: static;
+    width: auto;
+    transform: translate(0%, 0%);
+    height: min-content;
+    padding: 0px 0px;
+    left: 0;
+    top: 0;
+  } */
+
+  .Container {
+    padding-top: 20px;
+    position: relative;
+    transform: translate(-50%, 0%);
+    width: 90%;
+    top: 0;
+  }
+
+  .Search {
+    padding: 10px 5px;
+  }
+
+  .Search__Input {
+    padding: 0px 5px;
+  }
+
+  .Search__Button {
+    padding: 10px 10px;
+  }
+
+  .Information__Header {
+    margin-bottom: 15px;
+  }
+
+  .Information__Header-InformationContainer {
+    flex-direction: column;
+  }
+
+  .Information__Header-InformationContainer-Left {
+    height: min-content;
+  }
+
+  .Information__Header-InformationContainer-Right {
+    margin-left: 0;
+  }
+
+  .Information__Header-InformationContainer-Username {
+    margin-bottom: 5px;
+  }
+
+  .Information__Header-ImageContainer {
+    width: 40%;
+  }
+
+  .Information__StatsContainer-Container {
+    font-size: 12px;
+  }
+
+  .Information__BiographyContainer {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  .Information__StatsContainer {
+    width: auto;
+    padding: 15px 20px;
+    margin-left: 0;
+  }
+
+  .Information__ExtraContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Information__ExtraContainer .Information__ExtraContainer-Container:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+
+  .App {
+    background-color: var(--body-background);
+    width: 100vw;
+    height: -webkit-fill-available;
+    padding: 20px 0px;
     margin: 0;
   }
 
   .Container {
+    padding-top: 20px;
+    position: relative;
+    transform: translate(-50%, 0%);
     width: 90%;
-    top: 60%;
+    top: 0;
+  }
+
+  .Information__Header {
+    flex-direction: column;
+  }
+
+  .Information__Header-ImageContainer {
+    width: 15%;
+    border-radius: 100%;
+    margin-right: 0;
+    margin: auto;
+  }
+
+  .Information__Header-InformationContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Information__Header-InformationContainer-Left,
+  .Information__Header-InformationContainer-Right {
+    text-align: center;
   }
 
   .Search {
