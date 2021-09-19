@@ -18,3 +18,12 @@ code {
 h1, h2, p {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+a:hover {
+  opacity: .8;
+}

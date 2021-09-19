@@ -11,6 +11,12 @@ export const useFetch = ( url ) => {
 
     useEffect(() => {
 
+        if( !url ) {
+            return;
+        }
+
+        console.log(url)
+
         axios({
             method:"GET",
             timeout: 10000,

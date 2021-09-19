@@ -2,7 +2,9 @@ import { useState } from 'react'
 
 const useForm = () => {
 
-    const [Form, setForm] = useState('');
+    const [Form, setForm] = useState(({
+        url: "Jopt05"
+    }));
 
     const handleChange = ({ target }) => {
         setForm({
@@ -12,7 +14,10 @@ const useForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(Form);
+        setForm({
+            ...Form,
+            url: Form?.name
+        });
     }
 
     return [ Form, handleChange, handleSubmit ];

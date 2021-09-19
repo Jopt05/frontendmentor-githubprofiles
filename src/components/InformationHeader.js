@@ -1,23 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { appContext } from '../HighOrderComponents/Context';
+import dateFormat from 'dateformat'
 
 const InformationHeader = () => {
+
+    const { Info } = useContext(appContext);
+
     return (
         <div className="Information__Header">
             <div className="Information__Header-ImageContainer">
-                <img src="https://yt3.ggpht.com/ytc/AKedOLRIMxdlUR9zVI_Ivqt8_BD4jg2MgHDPRpHG2WwH=s48-c-k-c0x00ffffff-no-rj-mo" alt="Profile" />
+                <img src={ Info?.data?.avatar_url } alt="Profile" />
             </div>
             <div className="Information__Header-InformationContainer">
                 <div className="Information__Header-InformationContainer-Left">
                 <h2 className="Information__Header-InformationContainer-Profilename">
-                    The Octocat
+                    { Info?.data?.login }
                 </h2>
-                <p className="Information__Header-InformationContainer-Username">
-                    @octocat
-                </p>
+                <a target="_blank" href={ Info?.data?.html_url } className="Information__Header-InformationContainer-Username">
+                    { `@${Info?.data?.login}` }
+                </a>
                 </div>
                 <div className="Information__Header-InformationContainer-Right">
                 <p className="Information__Header-InformationContainer-Date">
-                    Joined 25 Jan 2011
+                    {
+                        `Joined ${ dateFormat(Info?.data?.created_at, "dd mmm yyyy") }`
+                    }
                 </p>
                 </div>
             </div>

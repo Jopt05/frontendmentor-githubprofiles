@@ -1,32 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { appContext } from '../HighOrderComponents/Context';
+import StatsContainer from './StatsContainer'
 
 const InformationStats = () => {
+
+  const { Info } = useContext(appContext);
+
     return (
         <div className="Information__StatsContainer">
-            <div className="Information__StatsContainer-Container">
-              <p className="Information__StatsContainer-Container-Title">
-                Repos
-              </p>
-              <p className="Information__StatsContainer-Container-Stat">
-                8
-              </p>
-            </div>
-            <div className="Information__StatsContainer-Container">
-              <p className="Information__StatsContainer-Container-Title">
-                Followers
-              </p>
-              <p className="Information__StatsContainer-Container-Stat">
-                3938
-              </p>
-            </div>
-            <div className="Information__StatsContainer-Container">
-              <p className="Information__StatsContainer-Container-Title">
-                Following
-              </p>
-              <p className="Information__StatsContainer-Container-Stat">
-                9
-              </p>
-            </div>
+            <StatsContainer title={ "Repos" } value={ Info?.data?.public_repos } />
+            <StatsContainer title={ "Followers" } value={ Info?.data?.followers } />
+            <StatsContainer title={ "Following" } value={ Info?.data?.following } />
         </div>
     )
 }

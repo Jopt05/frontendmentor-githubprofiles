@@ -222,6 +222,7 @@
 
 .Information__ExtraContainer-Container-Element p {
   color: var(--main-text-color);
+  word-break: break-all;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -290,6 +291,18 @@
     top: 60%;
   }
 
+  .Search {
+    padding: 10px 5px;
+  }
+
+  .Search__Input {
+    padding: 0px 5px;
+  }
+
+  .Search__Button {
+    padding: 10px 10px;
+  }
+
   .Information__Header {
     margin-bottom: 15px;
   }
@@ -311,7 +324,11 @@
   }
 
   .Information__Header-ImageContainer {
-    width: 30%;
+    width: 40%;
+  }
+
+  .Information__StatsContainer-Container {
+    font-size: 12px;
   }
 
   .Information__BiographyContainer {

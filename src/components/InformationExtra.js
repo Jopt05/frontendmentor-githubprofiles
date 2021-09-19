@@ -1,35 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { appContext } from '../HighOrderComponents/Context';
+import InformationExtrasContainer from './InformationExtrasContainer';
 
 const InformationExtra = () => {
+
+    const { Info } = useContext(appContext);
+
     return (
         <div className="Information__ExtraContainer">
             <div className="Information__ExtraContainer-Container">
-              <div className="Information__ExtraContainer-Container-Element">
-                <i class='bx bxs-map' ></i>
-                <p className="Information__ExtraContainer-Container-Text">
-                  San Francisco
-                </p>
-              </div>
-              <div className="Information__ExtraContainer-Container-Element">
-                <i class='bx bx-link' ></i>
-                <p className="Information__ExtraContainer-Container-Text">
-                  https://github.blog
-                </p>
-              </div>
+              <InformationExtrasContainer icon={ "bxs-map" } value={ Info?.data?.location }/>
+              <InformationExtrasContainer icon={ "bx-link" } value={ Info?.data?.blog }/>
             </div>
             <div className="Information__ExtraContainer-Container">
-              <div className="Information__ExtraContainer-Container-Element Disabled">
-                <i class='bx bxl-twitter' ></i>
-                <p className="Information__ExtraContainer-Container-Text">
-                  Not Available
-                </p>
-              </div>
-              <div className="Information__ExtraContainer-Container-Element">
-                <i class='bx bxs-buildings' ></i>
-                <p className="Information__ExtraContainer-Container-Text">
-                  @github
-                </p>
-              </div>
+              <InformationExtrasContainer icon={ "bxl-twitter" } value={ Info?.data?.twitter_username }/>
+              <InformationExtrasContainer icon={ "bxs-buildings" } value={ Info?.data?.company }/>
             </div>
         </div>
     )
